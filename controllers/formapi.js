@@ -49,8 +49,13 @@ const postRequest = async () => {
     return res.status(200).json(task);
 }
 
-const getRequestById = ()=>{
-    return res.send("get request by id");
+const getRequestById = async ()=>{
+    try {
+        const detbyid = await FormRequestModel.find({"id": req.params.id});
+        return res.status(200).json({detbyid})
+    }catch(error) {
+        return res.status(404).json({message: error.message});
+    }
 }
 
 

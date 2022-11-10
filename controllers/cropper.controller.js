@@ -57,6 +57,9 @@ async function getTemplateDetailsByName(req, res) {
     }
 }
 
+
+
+
 async function getTemplateImage(req, res) {
     try {
     const detail = await TemplateImageModel.find();
