@@ -13,10 +13,8 @@ const {FormRequestModel} = require('../models/formRequests')
 
 const createform =async(req,res)=>{
     //req.body.createdBy = req.user.userId
-           const task= await formapi.create(req.body)
-
+        const task= await formapi.create(req.body)
         res.status(StatusCodes.CREATED).json(task);
-        
     }
 
 const getallforminfo = async (req,res)=>{

@@ -16,9 +16,8 @@ require('dotenv').config()
 const start =async ()=>{
     try {
         await connectdb(process.env.MONGO_URI);
-        server.listen(PORT, ()=> {
-            console.log(`listening to ${PORT}`);
-        })
+        console.log("maksmdkamsdk")
+        server.listen(PORT, '0.0.0.0')
     } catch (error) {
         console.log(error);
     }
